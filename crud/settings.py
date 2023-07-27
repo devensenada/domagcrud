@@ -130,7 +130,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 if not DEBUG:
     # Tell Django to copy statics to the `staticfiles` directory
@@ -141,10 +141,10 @@ if not DEBUG:
     # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    "var/www/static"
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     "var/www/static"
+# ]
 
 LOGIN_URL ='/login'
 
